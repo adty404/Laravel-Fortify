@@ -28,6 +28,16 @@
                     @enderror
                 </div>
 
+                <div class="form-group d-flex justify-content-between">
+                    <div class="form-group-check">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+                    <div>
+                        <a href="/forgot-password">Forgot Password</a>
+                    </div>
+                </div>
+
                 <button type="submit" class="btn btn-block btn-primary">Login</button>
 
                 <div class="text-center mt-3">
