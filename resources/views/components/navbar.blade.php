@@ -23,13 +23,18 @@
                     <a class="nav-link" href="/login">Login</a>
                 </li>
             @else
-                <li class="nav-item">
-                    <a class="nav-link" href="#">{{ Auth::user()->name }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout" 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">View Profile</a>
+                        <a class="dropdown-item" href="{{ route('profile.edit') }}">Edit Profile</a>
+                        <a class="dropdown-item" href="#">Update Password</a>
+                        <a class="dropdown-item" href="/logout" 
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                         <form action="/logout" method="post" id="logout-form">@csrf</form>
+                    </div>
                 </li>
             @endguest
         </ul>
