@@ -30,7 +30,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">View Profile</a>
                         <a class="dropdown-item" href="{{ route('profile.edit') }}">Edit Profile</a>
-                        <a class="dropdown-item" href="#">Update Password</a>
+                        <a class="dropdown-item" href="{{ route('password.edit') }}">Update Password</a>
                         <a class="dropdown-item" href="/logout" 
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                         <form action="/logout" method="post" id="logout-form">@csrf</form>
