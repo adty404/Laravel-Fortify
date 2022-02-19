@@ -6,7 +6,7 @@ use App\Actions\Fortify\UpdateUserProfileInformation;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends UpdateUserProfileInformation
+class ProfileController extends Controller
 {
     public function edit(){
 
